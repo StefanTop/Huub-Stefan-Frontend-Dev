@@ -16,11 +16,7 @@ export default function Countries() {
         };
 
         getCountries();
-<<<<<<< HEAD
     }, [])
-=======
-    }, []);
->>>>>>> 8f6f478d92ff2e0c96d6a4d1bd0ea4f1b3b9c6ec
 
     return (
        <>
@@ -29,10 +25,10 @@ export default function Countries() {
               Loading...
            </h1> 
          ) : (
-        <section>
+        <section className="container mx-auto p-8">
             {/* form */}
             
-            <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+            <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4">
             {countries.map((country) => (
               <Article key={country.name.common} {...country} />
             ))}
