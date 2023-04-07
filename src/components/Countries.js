@@ -15,7 +15,7 @@ export default function Countries()
             }
         }
 
-        getCountries
+        getCountries();
     }, [])
 
     return (
