@@ -19,19 +19,42 @@ export default function SingleCountry() {
         getSingleCountry()
     }, [name]);
 
-  return <>
-    <section>
+  return (
+  <>
+    <section className="p-8 md:py-0 max-w-7xl mx-auto">
             {country.map((item) => (
-                <div key={item.population}>
+                <div key={item.population} 
+                className="grid grid-cols-1 gap-8 md:grid-cols-2 md:place-items-center md:h-screen">
                     <article>
                         <img src={item.flags.svg} alt={item.name.common} />
                     </article>
 
                     <article>
-                        <h1>{item.name.official}</h1>
+                        <h1 className="font-bold text-gray-900 text-4xl lg:text-6xl">
+                            {item.name.official}
+                        </h1>
+                        
+                        <ul>
+                            <li>Capital: {item.capital[0]}</li>
+                            <li>Population: {item.population.toLocaleString()}</li>
+                            <li>Region: {item.region}</li>
+                            <li>Subregion: {item.subregion}</li>
+                        </ul>
+
+                        {item.borders && (
+                        <>
+                           <h3>Borders:</h3>
+                           <ul>
+                             {item.borders.map((border, index) => (
+                                <li key={index}>{border}</li>
+                            ))}
+                        </ul>
+                        </>
+                        )}
                     </article>
                 </div>
             ))}
     </section>
-  </>;
-}
+  </>
+  );
+} 
