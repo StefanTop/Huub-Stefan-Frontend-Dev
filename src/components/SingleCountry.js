@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 
 export default function SingleCountry() {
     const[country, setCountry] = useState([]);
@@ -51,6 +51,8 @@ export default function SingleCountry() {
                         </ul>
                         </>
                         )}
+
+                        <Link to="/" className="inline-block mt-8 bg-white py-2 px-6 rounded shadow text-gray-700 hover:bg-gray-200 transition-all duartion-200 dark:bg-gray-800 dark:hover:bg-gray-700 dark:text-gray-400">&larr; Back</Link>
                     </article>
                 </div>
             ))}
