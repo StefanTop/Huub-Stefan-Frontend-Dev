@@ -30,7 +30,7 @@ export default function Countries() {
             try {
                 const res = await fetch("https://restcountries.com/v3.1/all");
                 const data = await res.json();
-                setCountries(data.slice(0,12));
+                setCountries(data);
             } catch (error) {
                 console.error(error);
             }
