@@ -21,7 +21,7 @@ export default function Countries() {
             name: "Americas",
         },
         {
-            name: "Antartic",
+            name: "Antarctic",
         },
     ]
 
